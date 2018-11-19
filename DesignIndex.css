@@ -1,0 +1,176 @@
+
+		Body {
+			background-color: #D6F4C9;
+			font-family: Segoe UI;
+		}
+
+		Header {
+			text-align: right;
+			margin-top: 40px;
+			margin-right: 50px;
+			margin-left: 50px;
+			word-spacing: 25px;
+			height: 160px;
+			min-width:400px;
+			max-width:2000px;
+		}
+
+		footer {
+			font-size: 14pt;
+			text-align: center;
+			margin-top: 220px;
+			min-width:500px;
+			max-width:2000px;
+		}
+
+
+		.LogoLandDigital {
+			width: 160px;
+			height: 160px;
+			float: left !important;
+		}
+
+		.Button {
+			height:30px;
+			width:30px;
+			border: none;
+			background-color: #D6F4C9;
+			background-repeat:no-repeat;
+			background-size: contain;
+			opacity: 0.55;
+		}
+
+		input[name="menu"] {
+			background-image: url(Bilder/Menue.png);
+		}
+
+
+		input[name="profile"] {
+			background-image: url(Bilder/Benutzer.png);
+		}
+
+		input[name="logout"] {
+			background-image: url(Bilder/off.png);
+		}
+
+		input[name="cart"] {
+			background-image: url(Bilder/Einkaufswagen.png);
+			background-position: bottom;
+		}
+
+		input[name="index"] {
+			background-image: url(Bilder/Lupe.png);
+			background-position: bottom;
+		}
+
+		#tb1{
+
+			border: 1px solid black;
+      border-collapse: collapse;
+		}
+
+		.content {
+			min-width:500px;
+			max-width:2000px;
+			text-align: center;
+		}
+
+
+		.SearchLogo {
+			text-align: center;
+			opacity: 0.55;
+			min-width:500px;
+			max-width:2000px;
+		}
+
+		.SearchLogoImg {
+			height: 130px;
+		}
+
+		input[name="searchBar"] {
+			height:50px;
+			width:650px;
+			text-align: center;
+			border: none;
+			font-family: Segoe UI;
+			float: center;
+			margin-top: 50px;
+		}
+
+		input[name="search"] {
+			background-image: url(Bilder/PfeilRechts.png);
+			height:52px;
+			width:52px;
+			opacity: 0.55;
+			border: none;
+			background-color: #D6F4C9;
+			background-repeat:no-repeat;
+			background-size: 30px;
+			background-position: center;
+		}
+
+		.search:hover {
+			border: none;
+			background-color: gray;
+		}
+
+
+		a {
+			text-decoration: none;
+			color: #49494B;
+			text-align: center;
+			vertical-align: 10px;
+		}
+
+		.SearchResult{
+			float: center;
+			text-align: center;
+		}
+
+		input[name="ja"] {
+			background-image: url(Bilder/Plus.png);
+			height:52px;
+			width:52px;
+			opacity: 0.55;
+			border: none;
+			background-color: #D6F4C9;
+			background-repeat:no-repeat;
+			background-size: 30px;
+			background-position: center;
+		}
+
+		.CartLogo {
+			text-align: center;
+			opacity: 0.55;
+			min-width:500px;
+			max-width:2000px;
+		}
+
+
+		.CartLogoImg {
+			height: 130px;
+			margin-bottom: 20px;
+		}
+
+		.CartElements{
+			text-align: center;
+		}
+
+
+		input[name="BestellungAufgeben"] {
+			background-image: url(Bilder/PfeilRechts.png);
+			height:52px;
+			width:52px;
+			opacity: 0.55;
+			border: none;
+			background-color: #D6F4C9;
+			background-repeat:no-repeat;
+			background-size: 30px;
+			background-position: center;
+		}
+
+		.OrderButton{
+			float: center;
+			text-align: center;
+			margin: 50px;
+		}
