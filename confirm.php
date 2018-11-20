@@ -92,6 +92,7 @@ foreach($adressV as $banana){
 <html>
 	<title>Angebotserstellung</title>
 	<h1 style="font-size:20px;text-align:center"> Zu erstellende Angebote: </P>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="DesignIndex.css">
 	<head>
 		<style>
@@ -169,8 +170,6 @@ foreach($adressV as $banana){
 						var waycomb = response.rows[j].elements[adressV.length+j].distance.value;
 						var fahrdistance = (way1+way2+way3)-waycomb;
 
-						//outputDiv.innerHTML += way1+' '+way2+' '+way3+' '+waycomb+' '+fahrdistance+'<br>' ;
-
 						if(fahrdistance < shortestdistance || shortestdistance == 0){
 							shortestdistance = fahrdistance;
 							F = j;
@@ -179,8 +178,8 @@ foreach($adressV as $banana){
 			adresse = adressV[i];
 			var k ="F";
 			geocodeAddress(geocoder,map,adresse,k);
-
-			outputDiv.innerHTML += 'Verkauefer: '+adressV[i]+' --- Fahrer: '+adressF[F]+' --- Umweg: '+shortestdistance/1000+' km<br>' ;
+			outputDiv.innerHTML += "<table class=\"table table-bordered table-hover table-striped\"><tr><th>Fahrer</th><th>Verkaeufer</th></tr></table>";
+			//outputDiv.innerHTML += 'Verkauefer: '+adressV[i]+' --- Fahrer: '+adressF[F]+' --- Umweg: '+shortestdistance/1000+' km<br>' ;
 			shortestdistance = 0;
 			uebergabe += adressV[i] + ":" + adressF[F] + "|";
 			}});
@@ -189,7 +188,7 @@ foreach($adressV as $banana){
 			//geocodeAddress(geocoder,map,adresseKaeufer,"K");
 			function geocodeAddress(geocoder, resultsMap, adress, k){
 			var address = adresse;
-			outputDiv.innerHTML += address;
+			//outputDiv.innerHTML += address;
 			geocoder.geocode({'address': address}, function(results, status) {
 			if (status === 'OK') {
 				resultsMap.setCenter(results[0].geometry.location);
