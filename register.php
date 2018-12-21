@@ -12,16 +12,13 @@ $message ='';
 if(!empty($_POST['emailBenutzer']) && !empty($_POST['passwort'])): //Prüfen ob Eingabefeld für Email und Passwort nicht leer
 	
 	//Neuen Nutzer in DB anlegen 
-	$sql = "INSERT INTO Benutzer (emailBenutzer, vnameBenutzer, nameBenutzer, passwort, Strasse, Hausnummer, PLZ, Ort) VALUES (:emailBenutzer, :vnameBenutzer, :nameBenutzer, :passwort, :Strasse, :Hausnummer, :PLZ, :Ort)"; // Zeile 8 =Query  //Code muss an jede Datenband angepasst werden  ":"steht für column
+	$sql = "INSERT INTO Benutzer (emailBenutzer, vnameBenutzer, nameBenutzer, Adresse, passwort) VALUES (:emailBenutzer, :vnameBenutzer, :nameBenutzer, :Adresse, :passwort)"; // Zeile 8 =Query  //Code muss an jede Datenband angepasst werden  ":"steht für column
 	$stmt =  $conn->prepare($sql);  
 	
 	$stmt->bindParam(':emailBenutzer', $_POST['emailBenutzer']);
 	$stmt->bindParam(':vnameBenutzer', $_POST['vnameBenutzer']);
 	$stmt->bindParam(':nameBenutzer', $_POST['nameBenutzer']);
-	$stmt->bindParam(':Strasse', $_POST['Strasse']);
-	$stmt->bindParam(':Hausnummer', $_POST['Hausnummer']);
-	$stmt->bindParam(':PLZ', $_POST['PLZ']);
-	$stmt->bindParam(':Ort', $_POST['Ort']);
+	$stmt->bindParam(':Adresse', $_POST['Adresse']);
 	//$password = password_hash($_POST['passwort'], PASSWORD_BCRYPT);  //password_hash-Funktion => Passwort wird verschlüsselt in DB gespeichert
 	$stmt->bindParam(':passwort',$_POST['passwort']);						 //password_hash-Funktion => Passwort wird verschlüsselt in DB gespeichert
 	
@@ -73,10 +70,7 @@ endif;
 			<!--<input class="input" type="password" placeholder="Passwort wiederholen" name="confirm_passwort"> -->
 			</div>
 			<div class="teil2">
-			<input class="input" type="text" placeholder="Strasse" name="Strasse">  
-			<input class="input" type="text" placeholder="Hausnummer" name="Hausnummer">  
-			<input class="input" type="text" placeholder="PLZ" name="PLZ"> 
-			<input class="input" type="text" placeholder="Ort" name="Ort">	
+			<input class="input" type="text" placeholder="Adresse" name="Adresse">  
 			</div>
 			<br>
 			<input class="submitButton" type="submit" value="Registrieren">	<br><br><br>	<!-- Absende/ Bestätigungs Button, Value gibt die Beschriftung des Buttons an -->

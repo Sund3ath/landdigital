@@ -14,6 +14,10 @@ $stmt = $conn->prepare($query);
 $stmt->execute();
 
 
+//$pName = "";
+//$pPreis = "";
+//$Verkaeufer = "";
+
 if ($stmt->rowCount() > 0) {
 $result = $stmt->fetchAll();
 
