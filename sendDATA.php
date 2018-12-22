@@ -14,7 +14,7 @@ for ($x = 0; $x <=$counter; $x++) {                   //Datenbanktabelle Bestell
   $stmt = $conn->prepare($query);
   $stmt->execute();
   $produktname = $stmt->fetch();
-  echo $produktname[0];
+  //echo $produktname[0];
   $query= "UPDATE Bestellung SET adresseFahrer = '" . str_replace("ß","ss", $fahrer) . "' WHERE idBenutzer = '" . $_SESSION['user_id'] . "'" . " AND adresseVerkaeufer LIKE '" . str_replace("ß","ss", $strasse). "%" . "'";
   $stmt = $conn->prepare($query);
   $stmt->execute();
