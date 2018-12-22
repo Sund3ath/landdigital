@@ -88,7 +88,8 @@ $noResults = 'Keine Treffer';
 		<?php endif; ?>
 		<?php endif; ?>
 	</div>
-
+	<!--shortestadress
+ 	<!--test
 	<!-- Nicht angemeldete Nutzer werden zum login weitergeleitet -->
 	<?php else: ?>
 	<?php
