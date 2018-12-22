@@ -68,8 +68,8 @@ $result = $stmt->fetchAll();
 			 $stmt->execute();?>
 			 <tr>
 			 	<td><?php echo $ergebnis." " ;?></td>
-				<td><?php echo $ergebnis." " ;?></td>
-				<td><?php echo $ergebnis." " ;?></td>
+				<td><?php echo "NULL";?></td>
+				<td><?php echo "NULL";?></td>
 				<td><a href="cart.php?action=delete&id=<?php $query= "DELETE FROM Bestellung WHERE Product1 = '" . $ergebnis . "'";?>
 				<?php$stmt = $conn->prepare($query);?>
 				<?php$stmt->execute();?>"><span class="text-danger">Remove</span></a></td>
